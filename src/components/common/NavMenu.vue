@@ -35,14 +35,27 @@
 
 
       <div class="nav-search" style="width: 40%;padding-top: 15px;margin-left: 30px">
-        <el-input
+        <!-- <el-input
           @keyup.enter="searchClick"
           placeholder="Search for a movie, director, person..."
           size="default"
           style="width: 120%;margin-right: 10px"
           v-model="keywords">
-      </el-input>
-        <el-button size="default" type="primary" icon="Search" @click="searchClick" style="font-size: 15px;">Search</el-button>
+        </el-input>
+        <el-button size="default" type="primary" icon="Search" @click="searchClick" style="font-size: 15px;">Search</el-button> -->
+
+        <el-input
+          @keyup.enter="searchClick"
+          placeholder="Search for a movie, director, person..."
+          size="default"
+          style="width: 120%;margin-right: 10px;"
+          v-model="keywords">
+
+          <template v-slot:append>
+            <el-button size="default" type="primary" icon="Search" @click="searchClick" style="font-size: 15px; color:white; padding: 0px 15px;">Search</el-button>
+          </template>
+
+        </el-input>
       </div>
       <div class="nav-sep" style="width: 2%;">
         <h3 style="color: white">|</h3>
