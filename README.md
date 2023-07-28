@@ -1,5 +1,5 @@
 # frontend
-Set up the frontend of a movie recommandation system
+Set up the frontend of the movie recommandation system
 ## Project setup
 ```
 npm install
