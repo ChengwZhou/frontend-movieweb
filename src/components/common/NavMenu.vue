@@ -35,15 +35,6 @@
 
 
       <div class="nav-search" style="width: 40%;padding-top: 15px;margin-left: 30px">
-        <!-- <el-input
-          @keyup.enter="searchClick"
-          placeholder="Search for a movie, director, person..."
-          size="default"
-          style="width: 120%;margin-right: 10px"
-          v-model="keywords">
-        </el-input>
-        <el-button size="default" type="primary" icon="Search" @click="searchClick" style="font-size: 15px;">Search</el-button> -->
-
         <el-input
           @keyup.enter="searchClick"
           placeholder="Search for a movie, director, person..."
@@ -214,10 +205,9 @@
         padding-right: 10px;
         cursor: pointer;
       }
+      ::v-deep .nav-search .el-input__wrapper {
+        border-radius: 20px 0px 0px 20px !important;;
+        background-color: transparent !important;
+    }
       
-
-
-
-
-  
   </style>
