@@ -12,7 +12,7 @@
 import VideoPlay from "@/components/home/VideoPlay";
 import PageContent from "@/components/home/PageContent";
 export default {
-  name: 'Home',
+  name: 'HomePage',
   components: {PageContent, VideoPlay}
 }
 </script>

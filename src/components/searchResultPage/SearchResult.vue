@@ -12,7 +12,7 @@ export default {
   name: "SearchResult",
   components:{SearchView},
   created() {
-    let url = this.$route.query.url
+    // let url = this.$route.query.url
     const keywords = this.$route.query.keywords
     this.$axios.post('/...', ).then((resp) => {
       if (resp && resp.status === 200) {

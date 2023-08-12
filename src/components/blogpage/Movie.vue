@@ -79,16 +79,16 @@
         </el-carousel>
       </div>
     </div>
-    <Footer></Footer>
+    <PageFooter></PageFooter>
   </div>
 </template>
 
 <script>
 
-import Footer from "@/components/common/Footer";
+import PageFooter from "@/components/common/Footer";
 export default {
-  name: "Movie",
-  components: {Footer},
+  name: "MovieBlog",
+  components: {PageFooter},
   data: () => ({
 
     slides: [

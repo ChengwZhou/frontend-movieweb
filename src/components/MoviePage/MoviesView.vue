@@ -6,7 +6,7 @@
         :key="item.id">
             <template v-slot:content>
                 <h1 style="font-size: 24px;margin-bottom: 6px;">{{item.movie_name}} ({{item.publish_date.slice(0, 4)}})</h1>
-                <rate :grade="(item.rate*2).toFixed(1)"></rate>
+                <RateStars :grade="(item.rate*2).toFixed(1)"></RateStars>
                 <p>Director:  {{item.director}}</p>
                 <p>Actors:  {{item.actor}}</p>
                 <p>TMDB_id:  {{item.tmdb_id}}</p>
@@ -50,11 +50,11 @@
   
   <script>
 //   import EditInformation from "@/components/admin/content/EditInformation";
-  import Rate from "@/components/common/Rate";
+  import RateStars from "@/components/common/Rate";
   
   export default {
     name: 'MoviesView',
-    components: {Rate},
+    components: {RateStars},
     data () {
       return {
         currentPage:1,

@@ -21,11 +21,11 @@
                   <div class="slide-content" align="left">
                     <p class="count">NO.{{i+1}} {{slide.title}}({{slide.date}})</p>
                     <div class="rateAndType">
-                      <rate
+                      <RateStars
                           :grade=slide.rate
                           style="margin-right: 20px"
                       >
-                      </rate>
+                      </RateStars>
                       <el-tag
                           style="margin: 3px"
                           :key="category.id"
@@ -91,12 +91,12 @@
   
   <script>
   import { VueperSlides, VueperSlide } from 'vueperslides'
-  import Rate from "@/components/common/Rate"
+  import RateStars from "@/components/common/Rate"
   import 'vueperslides/dist/vueperslides.css'
   import '../../assets/my-ele-css/my-loading.css'
   export default {
-    name: "Recommand",
-    components: {VueperSlide, VueperSlides,Rate},
+    name: "MovieRecommand",
+    components: {VueperSlide, VueperSlides,RateStars},
     data: () => ({
       isCollected: false,
       slides: [],
@@ -128,9 +128,10 @@
           if (resp && resp.status === 200) {
             _this.slides = resp.data
           }
-        }).catch(failResponse => {
-          this.$alert('Request failed. Please try again later...')
         })
+        // }).catch(failResponse => {
+        //   this.$alert('Request failed. Please try again later...')
+        // })
       },
       refresh() {
         const loading = this.$loading({

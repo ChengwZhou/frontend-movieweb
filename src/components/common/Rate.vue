@@ -9,7 +9,7 @@
   
   <script>
   export default {
-    name:'Rate',
+    name:'RateStars',
     data() {
       return {
         starArr: [],//星级评分所需处理的数组

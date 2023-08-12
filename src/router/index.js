@@ -2,13 +2,13 @@
 
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Home from '@/components/Home'
+import HomePage from '@/components/Home'
 import SearchResult from "@/components/searchResultPage/SearchResult";
-import Register from '../components/RegisterPage/Register.vue'
-import Login from '../components/UserLoginPage/Login.vue'
+import UserRegister from '../components/RegisterPage/Register.vue'
+import UserLogin from '../components/UserLoginPage/Login.vue'
 import MovieSet from "@/components/MoviePage/MovieSet"
-import Recommand from "@/components/recomandpage/Recommand"
-import Movie from '@/components/blogpage/Movie'
+import MovieRecommand from "@/components/recomandpage/Recommand"
+import MovieBlog from '@/components/blogpage/Movie'
 import ErrorPage from "@/components/common/ErrorPage";
 
 
@@ -22,8 +22,8 @@ import EDA from '../components/admin/EDA.vue'
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'HomePage',
+    component: HomePage,
     meta: {
         keepAlive: true
     }
@@ -38,21 +38,21 @@ const routes = [
   },
 
   { path: '/login', 
-    component: Login,
+    component: UserLogin,
     meta: {
     keepAlive: false
   }
   },
   { path: '/register', 
-    component: Register,
+    component: UserRegister,
     meta: {
       keepAlive: false
     }
   },
   {
     path: '/movie',
-    name: 'Movie',
-    component: Movie,
+    name: 'MovieBlog',
+    component: MovieBlog,
     meta: {
         keepAlive: true,
         requireAuth: true
@@ -69,8 +69,8 @@ const routes = [
   },  
   {
     path: '/recommand',
-    name: 'Recommand',
-    component: Recommand,
+    name: 'MovieRecommand',
+    component: MovieRecommand,
     meta: {
         keepAlive: true,
         requireAuth: true,

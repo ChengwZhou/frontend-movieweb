@@ -50,7 +50,7 @@
   
   <script>
   export default {
-    name: "Login",
+    name: "UserLogin",
     data () {
       return {
         checked: false,
